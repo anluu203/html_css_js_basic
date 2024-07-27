@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup-login.css">
+    <title>Đăng Nhập</title>
+    
+</head>
+<body>
+    <div class="overlay"></div>
+    <header>
+        <nav>
+            <a href="../index.html" class="active">Home</a>
+            <a href="../about-yamaha.html">About</a>
+            <a href="../Sanpham.html">Product</a>
+            <a href="../service-yamaha.html">Services</a>
+            <a href="../signup-login/login.html">Login</a>
+        </nav>
+    </header>
+    <form class="login-form" >
+        <h2>Đăng Nhập</h2>
+        <input type="text" id="user" name="user" placeholder="User"  >
+        <input type="password" id="password" name="password" placeholder="Password"  >
+        <button type="submit" onclick="checkform()">Đăng Nhập</button>
+        <a href="signup.html">Chưa có tài khoản? <span>Đăng ký</span></a>
+    </form>
+    <script src="signup-login.js"></script>
+</body>
+</html>

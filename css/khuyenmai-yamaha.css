@@ -1,0 +1,532 @@
+/* Reset CSS */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+@font-face
+{   
+    src: url('../fonts/static/RobotoCondensed-Bold.ttf');
+    font-family: 'RobotoCondensed-Bold';
+}
+@font-face
+{   
+    src: url('../fonts/static/RobotoCondensed-Regular.ttf');
+    font-family: 'RobotoCondensed';
+}
+.header
+{
+    height: 86px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.61);
+    display: block;
+    position: fixed;
+    box-sizing: border-box;
+    z-index: 1;
+    box-shadow: rgb(124, 124, 124) 0px 1px 4px 0px;
+    text-size-adjust: 100%; 
+    z-index: 3;
+}
+ .header:before
+{
+    content: "";
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translate(-50%,0); 
+   
+    height: 100%;
+    width: 0;
+    background-color: rgb(255, 255, 255);
+    transition-delay: 0s;
+    transition-duration: 2s;
+    transition-property: width;
+    
+}
+.header:hover::before 
+{ 
+    width: 100%;
+} 
+#header-row {
+    padding: 15px 25px 20px;
+    position: relative;
+    align-items: center;
+    font-size: 10px;
+    display: flex;
+    line-height: 17px;
+    justify-content: space-between;
+    font-family: 'RobotoCondensed' ;
+    color: black;
+    
+}
+#header-row #logo {
+    display: block;
+    width: 15%;   
+    height: 42.3125px;
+    background-image: url(../image/logo-yamaha.png.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    unicode-bidi: isolate;
+    margin-left: 10px;
+}
+#header-row #nav 
+{  
+    width: 85%;
+    display: inline-block;
+}
+ul.nav-top-list,
+ul.nav-bot-list  
+{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+#nav-top li
+{
+    display: list-item;
+    list-style-type: none;  
+    text-align: left; 
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#nav-top li a
+{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;  
+    font-size: 14px;
+    padding: auto;
+}
+#nav-bot {margin-top: 15px; display: block;}
+#nav-bot li
+{
+    font-family:'RobotoCondensed-Bold' ;
+    position: relative;
+    display: list-item;
+    list-style-type: none;  
+    text-align: left; 
+    border-left: 2px solid;
+    line-height: 10px;
+    padding: 0 10px;
+    
+}
+.nav-bot-list p 
+{
+    display: inline-block; 
+    position: relative;
+}
+#nav-bot span 
+{
+    position: absolute;
+    bottom: -15px;
+    text-align: center;
+    left: 0; right: 0;
+    font-family: RobotoCondensed;
+    font-size: 11px;
+    
+}
+#nav-bot li a
+{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;  
+    font-size: 17px;
+    padding: 0 10px ;
+}
+
+.new-me-discover { position: relative;} 
+#nav-bot .sub-nav
+ {  
+     display: flex; 
+    position: fixed;
+    width: 954px;
+    height: auto;
+    padding-top: 20px;
+    overflow: hidden;
+    z-index: 1;
+ }
+ @keyframes fadeup-center {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+ .new-me-discover:hover .sub-nav ul {
+    display: flex;  
+    animation: fadeup-center .9s 0s forwards;   
+}
+
+ /* .sub-nav li :hover ul {display: flex; z-index: 1; } */
+ .sub-nav ul
+ {
+    position: relative;
+    display: none;
+    height: 455px; width: 100%;
+    text-align: left;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+    transition: transform 1s;
+ }
+
+ #nav-bot .sub-nav li
+{ 
+    border-left: 0px solid;
+}
+.sub-nav li#left
+{
+    box-shadow: rgb(193, 185, 185) 0px 1px 4px 0px;;
+    height: auto;
+    width: 25.448%;
+    display: list-item;
+    margin: 10px;
+}
+.sub-nav-item 
+{
+     width: auto;
+     height: auto; 
+     position: relative;
+     display: inline-block;    
+    }
+ #left .sub-nav-item 
+ {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 10px;
+ }  
+.sub-nav-item>p
+{
+ 
+    top: 15px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    line-height: 10px;
+    
+    font-size: 18px;
+    text-align: center;
+}
+
+.sub-nav-item img
+{
+    
+    display: inline-block;
+    width: 100%; height: 100%;
+    max-width: 240px;
+    margin-left: auto; margin-right: auto;
+    margin-top: 20%;
+    background-size: cover; /* Hoặc cover */
+    background-position: center; /* Căn chỉnh hình ảnh vào giữa */
+    background-repeat: no-repeat;
+    
+}
+.sub-nav li#right
+{
+    width: 74.225%;
+    display: list-item;
+    box-shadow: rgb(211, 204, 204) 0px 1px 4px 0px;;
+    margin: 10px;
+}
+
+#right .sub-nav-item-row
+{
+     display: grid; 
+     /*  display: grid;  
+     hiển thị đối tượng dạng lưới phù hợp 
+     để thiết kế web phức tạp  */                
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 10px;
+}
+
+/* MAIN */
+.overlay
+{
+    padding: 140px 0px 70px 0px;
+    width: auto;
+    background-image: url('../image/congnghe-bg-img.webp');
+    background-repeat: no-repeat;
+}
+.overlay-content
+{
+    padding: 35px 40px 25px;
+    margin: 0 170px;
+    background-color: #fff;
+    font-family: RobotoCondensed;
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.4);
+}
+ .slide-img
+{
+    margin: 40px 0;
+    background-image: url('../image/Khuyen_mai/Thumbnail-slider.webp');
+    background-size: cover;
+    background-repeat: no-repeat ;
+    height: 530px;
+}
+.slide-caption
+{
+    color: white;
+    position: absolute;
+    padding: 20px;
+    width: 100%;
+    bottom: 60px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)); /* Gradient từ trong suốt đến màu đen nhẹ */
+}
+.slide-caption p
+{
+    background-image: url(../image/Khuyen_mai/ico-calender-white.png.webp);
+    background-position: left center; /* Đặt vị trí của background image */
+    padding-left: 20px; /* Tạo khoảng cách giữa background image và văn bản */
+    background-repeat: no-repeat;
+    font-size: 19px;
+    line-height: 27.2px;
+}
+.slide-caption h3
+{
+    font-size: 23px;
+    line-height: 30.6px;
+    font-weight: 700;
+}
+.dots {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    height: 100%; /* Đảm bảo chiều cao của .dots là 100% của container cha */
+}
+.dots li {
+    list-style-type: none; /* Loại bỏ dấu đầu dòng */
+    width: 20px; /* Độ rộng của mỗi dấu chấm */
+    height: 20px; /* Chiều cao của mỗi dấu chấm */
+    border-radius: 50%; /* Tạo dạng hình tròn cho mỗi dấu chấm */
+    background-color: black; /* Màu sắc của mỗi dấu chấm */
+    margin: 0 10px; /* Khoảng cách giữa các dấu chấm */
+}
+.dots li#active {
+    background-color: white;
+    border: 1px solid;
+    border-color: black;}
+.dots li:hover
+{
+    background-color: white;
+    border: 1px solid;
+    border-color: black;
+    
+}
+
+.container
+{
+    padding-top: 100px;
+}
+.container h2
+{
+    font-family: RobotoCondensed-Bold;
+    background-color: black;
+   color: rgb(255, 255, 255);
+   text-align: center; 
+   font-size: 24px;
+   padding: 10px 0;
+   text-transform: uppercase;
+   line-height: 24px;
+   margin-bottom: 30px;
+}
+#list-object
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.boder-object
+{
+    width: 50%;
+    margin-top: 25px;
+    padding: 0px 10px;
+}
+#list-object .object{
+    height: 100%;
+    box-shadow: 7px 0 13px rgba(0, 0, 0, 0.2);
+}
+.object .image img
+{
+    width: 100%;
+}
+.content-bottom
+{
+    padding: 20px; padding-top: 12px; 
+}
+
+.content-bottom p{
+    color: rgb(128, 128, 128);
+    padding-top: 12px; 
+    margin-bottom: 50px;
+    font-size: 16px;
+    line-height: 27.2px;
+}
+.content-bottom .infor
+{
+    display: flex;
+    width: 100%;
+}
+.infor .btn{
+    background-color: black;
+    border-top: 2px solid;
+    border-color: gray;
+    padding: 6px 15px;
+}
+.infor .btn a{
+    text-decoration: none;
+    color: white;
+}
+.infor .calender
+{
+    background-image: url(../image/Khuyen_mai/ico-calender-black.webp);
+    background-position: left center; /* Đặt vị trí của background image */
+    padding-left: 20px; /* Tạo khoảng cách giữa background image và văn bản */
+    background-repeat: no-repeat;
+    margin-left: 213.297px;
+    padding-left: 22px;
+    font-size: 16px;
+    line-height: 27px;
+}
+/* NEWS BOTTOM */
+.news-bottom
+{
+    margin-top: 25px;
+    border-top: 0.5px solid;
+    padding-top: 30px;
+}
+.news-bottom ul
+{
+    display: flex;
+
+}
+.news-bottom ul li {
+    list-style: none;
+    width: 16.666%; /* Định nghĩa kích thước cho mỗi hình ảnh */
+    height: 152px;
+}
+.news-bottom ul li { padding: 0 8.7px;}
+
+/* Định nghĩa hình ảnh nền cho mỗi thẻ li */
+#img1 {
+    background-image: url('../image/Tech-news-bottom/timthumb-1.jpg');
+    background-size: cover;
+    
+}
+
+#img2 {
+    background-image: url('../image/Tech-news-bottom/timthumb-2.jpg');
+}
+
+#img3 {
+    background-image: url('../image/Tech-news-bottom/timthumb-3.jpg');
+}
+
+#img4 {
+    background-image: url('../image/Tech-news-bottom/timthumb-4.jpg');
+}
+
+#img5 {
+    background-image: url('../image/Tech-news-bottom/timthumb-5.jpg');
+}
+
+#img6 {
+    background-image: url('../image/Tech-news-bottom/timthumb-6.jpg');
+}
+
+/* Chỉnh sửa các thuộc tính khác của hình ảnh (nếu cần) */
+.news-bottom ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover; /* Hiển thị hình ảnh đầy đủ trong phần tử li */
+}
+
+
+/* FOOTER */
+.footer
+{
+    width: 100%;
+    height: 424.469px;
+    background-color: rgba(0, 0, 0, 0.678);  
+    color: white;
+    font-family:  'RobotoCondensed';
+}
+
+.footer-height
+{
+    position: relative;  
+    height: 136.797px;
+    padding: 15px 25px; 
+    display: flex;
+    
+}
+.footer-left
+{
+    position: absolute;
+    
+}
+.social-list
+{
+    display: flex;
+    list-style-type: none;
+    
+}
+
+.social-list>li
+{
+    width: 25%;
+}
+.footer-navigation-list
+{
+    position: absolute;
+    display: flex;
+    right: 10%;
+}
+.footer-navigation-list>li
+{
+    padding: 0 20px;
+    border-color: white;
+    border-left: 2px solid;
+    list-style-type: none;
+    line-height: 10px;
+}
+li#first {border-left: 0;}
+.footer-navigation-list>li>a
+{
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+.footer-navigation-list>li>a:hover {color: rgb(215, 212, 212);} 
+
+.footer-infor
+{
+    height: 244.578px;
+    display: flex;
+}
+.in4-left
+{
+    margin-left: 50px;
+}
+.in4-left p {margin-top: 10px;}
+.in4-right {text-align: center;}
+.in4-right ul
+{
+    display: flex;
+    list-style-type: none;    
+}
+.in4-right li
+{
+    align-items: center;
+    line-height: 60px;
+    width: 291.625px;
+    height: 60px;
+    background-color: rgb(53, 49, 49);
+    margin: 15px;
+}
+.in4-right li img {width: 20px; height: 20px;}
+.in4-right li:hover {background-color: rgba(0, 0, 0, 0.678);}
+.copyright {text-align: center;}
